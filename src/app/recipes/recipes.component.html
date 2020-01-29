@@ -1,0 +1,9 @@
+<div class="container mt-4">
+    <div class="col-md-3 float-left">
+        <div class="card card-body" *ngFor='let r of recipes'>
+    <img src="{{r.img}}" class="card-img-top" alt="" (click)='sendRecipes(r)'>
+    <h4 class="card-title">{{r.dishes}}</h4>
+        </div>
+    </div>
+        <app-recipe-details [recipeDetails]='recipeData'></app-recipe-details>
+    </div>
